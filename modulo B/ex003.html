@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex003</title>
+</head>
+<body>
+    <script>
+        /* Ordem de precedência
+            ()
+            ** -> potencia 
+            * / %
+            + - 
+            
+        */
+
+        var a = 5 + 3;
+        var b = a % 5;
+        var c = 5 * b ** 2;
+        var d = 10 - a / 2;
+        var e = 6 * 2 / d;
+        var f = b % e + 4 / e
+
+        /*Como vai ser executado:
+            var a = 5 + 3;
+            var b = a % 5;
+            var c = 5 * (b ** 2);
+            var d = 10 - (a / 2);
+            var e = (6 * 2) / d;
+            var f = (b % e) + (4 / e);        
+        */
+
+        /*Auto-atribuições
+            var n = 1
+            n = n + 2
+            result n = 3
+        */
+        
+        /*Simplificando
+            var n = 1
+            n += 1
+            result n = 2
+            n += 2
+            result n = 4 
+        */
+
+        /*Incremento
+            var x = 5
+            x = x + 1   x++
+            x = x - 1   x--
+        */ 
+
+        /*Relacionais
+            > maior que
+            < menor que
+            >= maior ou igual a
+            <= menor ou igual a 
+            == igual
+            != defirente de 
+        */
+
+        /*Identidade
+            5 == 5 true
+            5 == '5' true (Tem o mesmo 'peso' por isso da true)
+            5 === '5' false (Podem até ter o mesmo 'peso' mas são tipos doferentes)
+            5 === 5 true
+        */
+
+        /*Lógicos
+            ! negação (NOT)
+            && conjunção (E) true && true
+            || disjunção (OU) true || false
+
+            precedência 
+            () ** / (operadores)
+            > < >= (ralacionais)
+            !
+            &&
+            ||
+        */
+
+        /*Ternário
+            ?
+            :
+
+            teste ? true : false
+
+            media >= 7.0 ? "aprovado" : "reprovado"
+
+            var x = 8
+            var res = x % 2 == 0 ? 5 : 9
+
+            var idade = 19
+            var r = idade >= 18 ? "Maior" : "Menor"
+        */
+
+
+
+    </script>
+    
+</body>
+</html>
