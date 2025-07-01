@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex001-DOM-</title>
+    <style>
+        body{
+            background-color: #5f90cfc9;
+            color: rgb(255, 255, 255);
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p> <!-- [0]-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p> <!-- [1]-->
+    <div id="msg1">Clique em mim 1</div>
+    <div name="msg2">Clique em mim 2</div>
+    <div class ="msg3">Clique em mim 3</div>
+    <div id="msg4">Clique em mim 4</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName("p")[0] // [0] primeiro p utilizado
+        //getElementsByTagName -- pega a tag
+        window.document.write(p1.innerText);
+        p1.style.color = "#1933a7c9"
+        corpo.style.background = ""
+
+        var d = window.document.getElementById('msg1');
+        d.style.background = "red"
+        d.innerText = "Mudou aqui ó" //-- junto com a variavel fica mais 'clean'
+
+        // window.document.getElementById('msg').innerText = 'Mudou mais uma vez!' -- jeito mais comprido
+
+        var n = window.document.getElementsByName('msg2')[0]// primeira div
+        n.innerText = "MUDOU!"
+
+        var c = window.document.getElementsByClassName('msg3')[0]
+        c.innerText = "Mudando mais uma vez"
+
+        var q = window.document.querySelector('div#msg4') // ex class ('div.msg4')
+        q.style.background = "blue"
+
+        /* Selecionando
+            Por Marca - getElementsByTagName() - mais de um objeto da mesma classe/nome
+            Por ID - (add o id) getElementByid() - um objeto
+            Por Nome - getElementsByname()
+            Por classe - getElementsByClassName()
+            Por seletor - querySelector() e querySelectorAll() -- Mais utilizado -- usa ID para selecionar -- quando é Id - # ---- class - .
+        */
+
+    </script>
+    <script>
+          /*DOM - Document - Object - Model
+        Arvore DOM 
+        - window: location, document, history
+        document- html - head - body
+        head - meta, title
+        body- h1, p, p, div
+        p - strong
+        */
+    </script>
+</body>
+</html>
+
+
