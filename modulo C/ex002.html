@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos-DOM-</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--  Eventos
+            mouseenter - quando o mouse encostar na div (enter -- entrou na div)
+            mousemove - quando 'andar' pela div (enquando se mover dentro da div ele vai disparar)
+            mousedown - clicar e segurar 
+            mouseup - dispara quando o mouse segurado é solto
+            click - um click
+            onmouseout - retirar da div (saiu)
+        
+
+          Funções
+            function nome(parametros){
+            }
+        
+    -->
+
+    <div id="area">  <!--onclick="clicar()" onmouseenter="entrar()"  onmouseout = "sair()"  foi retirado para melhoria do código -->
+        Interaja...
+    </div>
+
+    <script>
+        //add o EventListener deixa o html mais limpinho e fica na do javascript essa função de "ouvir" o pedido
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou'
+
+        }
+
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+
+    </script>
+
+</body>
+</html>
