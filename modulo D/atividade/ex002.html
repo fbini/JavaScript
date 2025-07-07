@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade02</title>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+    País de origem: <input type="text" id="pais">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var paiss = document.getElementById('pais')
+            var res = document.getElementById('res')
+            var vel = (paiss.value) //muito importante, aqui onde pegamos literal o valor do input
+            res.innerHTML = `<p>Seu país de origem é <strong>${vel}</strong></p>`
+            if (vel == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else{
+                res.innerHTML += `<p>Você é Estrangeiro</p>`
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
